@@ -1,0 +1,40 @@
+.book-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    &_action-container {
+      display: flex;
+      margin-left: auto;
+      padding: 10px;
+      
+      .mat-primary {
+        background-color: white;
+        color: black;
+        margin-left: 5px;
+      }
+    }
+}
+
+.page{
+  //color: rgb(213, 202, 202);
+  padding: 0 1rem;
+  background: #f1f5f9;
+
+  &_box{
+    min-height: 80px;
+    color: #1e293b;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin: 0 -1rem;
+    font-size: 36px;
+  }
+ 
+}
+
+.col-md {
+text-align: center;
+}
+
+.mat-paginator {
+    background: transparent;
+}

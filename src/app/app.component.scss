@@ -1,0 +1,17 @@
+#admin-wrapper {
+    //background-color: white;
+    display: flex;
+    flex-direction: column;
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        >app-content-area {
+            flex-grow: 1;
+        }
+    }
+}

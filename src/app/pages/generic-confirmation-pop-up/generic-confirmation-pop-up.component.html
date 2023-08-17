@@ -1,0 +1,11 @@
+<div align="center">
+  <h2 mat-dialog-title>{{data.title}}</h2>
+  <div mat-dialog-content>
+    <p [innerHTML]="data.description"></p>
+  </div>
+  <div mat-dialog-actions align="center">
+    <button mat-button class="save-btn" mat-dialog-close (click)="data.action()">Yes</button>
+    <button mat-button class="cancel-btn" mat-dialog-close>Cancel</button>
+  </div>
+</div>
+

@@ -1,0 +1,73 @@
+
+.page{
+  color: rgb(213, 202, 202);
+  padding: 0 1rem;
+  background: #f1f5f9;
+
+  &_box{
+    min-height: 80px;
+    color: #1e293b;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin: 0 -1rem;
+    font-size: 36px;
+  }
+ 
+}
+
+.example-card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-card-title-group {
+    justify-content: flex-start;
+  }
+  
+
+  .title-group {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+  }
+
+  .one {
+    flex: 1 1 auto;
+  }
+
+  .two {
+    color: #1e293b;
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+
+       
+  }
+
+  .three {
+    flex: 1 1 auto;
+
+    margin-top: 0rem;
+    border-radius: 10px;
+    max-height: 2.5rem;
+  }
+  
+  .row{
+    display: flex;
+    flex-direction: row;
+
+    .col1{
+
+      flex:1;
+    }
+
+    .col2{
+
+      flex:1;
+    }
+  }
+  span {
+    color: blue;
+  }
+

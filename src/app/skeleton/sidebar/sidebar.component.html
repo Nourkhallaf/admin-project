@@ -1,0 +1,15 @@
+<!-- Creates a layout with a left-positioned sidenav and explicit content. -->
+<div id="sidebar" class="sidebar"  *ngIf="isUserLoggedIn">
+
+
+
+<div class="logo py-4">
+    <img mat-card-sm-image src="../../../assets/acore.PNG" alt="ACORE Logo">
+</div>
+
+<a mat-list-item routerLink="/books" routerLinkActive="list-item-active">
+     <mat-icon>library_books</mat-icon> Books
+</a>  
+
+
+</div>

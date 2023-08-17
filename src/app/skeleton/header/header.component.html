@@ -1,0 +1,23 @@
+  <div *ngIf="isUserLoggedIn">
+
+
+    <mat-toolbar>
+      
+    <h1 class="mt-3">Acore admin dashboard</h1>
+    <span class="space"></span>
+    <div class="">
+      <button mat-button [matMenuTriggerFor]="menu">
+        Super Admin
+      </button>
+          
+        <mat-menu #menu="matMenu">
+          <!-- show email here  -->
+          {{email}}
+
+          <button mat-menu-item  (click)="logout()">
+           Logout <mat-icon aria-hidden="false">login</mat-icon>
+          </button>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+  </div>

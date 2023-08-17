@@ -1,0 +1,43 @@
+.sidebar {
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+    height: 100%;
+    font-family: sans-serif;
+    ul {
+        padding: 0;
+    }
+    ul li {
+        color: black;
+        list-style: none;
+        padding: 10px 5px;
+        inset: 0;
+        cursor: pointer;
+        background-color: #EEEEEE;
+        margin-top: 2px;
+        width: 90%;
+
+        &:hover {
+            background-color: #DDEEEE; 
+        }
+        &:active {
+            background-color: #DDEEEE; 
+        }
+    }
+
+    span {
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+}
+
+#sidebar {
+    position: relative;
+    background: transparent;
+
+}
+
+.selected {
+  background-color: white!important;
+  font-weight: bold;
+}

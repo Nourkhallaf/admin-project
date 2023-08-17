@@ -1,0 +1,43 @@
+
+<mat-grid-list cols="2">
+  <mat-grid-tile>
+
+    <mat-card>
+      <mat-card-title>Please enter your Email and Password to access your account</mat-card-title>
+      <mat-card-content>
+      <form  (ngSubmit)="login()" [formGroup]="loginForm">
+
+        <p>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Email" formControlName="email">
+            <mat-error> Email is Required </mat-error>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
+            <input type="password" matInput placeholder="Password" formControlName="password">
+            <mat-icon matSuffix class="placeholder" (click)="showPassword()">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+            <mat-error> Password is Required </mat-error>
+
+          </mat-form-field>
+        </p>
+       
+        <div class="login-button">
+
+          <button mat-flat-button color="primary" type="submit">sign In</button>
+
+        </div>
+      </form>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <!-- image here -->
+    <img mat-card-image src="../../../assets/bookImg.PNG" alt="Photo of a Shiba Inu">
+
+
+  </mat-grid-tile>
+
+</mat-grid-list>

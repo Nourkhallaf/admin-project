@@ -1,0 +1,73 @@
+
+
+
+
+<div class="container-create page">
+  <div class="page_box">
+      <div>Books</div>
+  </div>
+<div class="book-container mat-elevation-z8">
+
+    <div class="book-container_action-container">
+      <button mat-raised-button color="primary"  (click)="addBook()">
+        
+        <mat-icon>add</mat-icon>
+        Add Books
+      </button> 
+    </div>
+
+<!-- 
+    <form [formGroup]="filterForm" (ngSubmit)="searchBooks()">
+      <mat-form-field>
+        <input matInput placeholder="Title" formControlName="title">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Category" formControlName="author">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Search</button>
+    </form> -->
+
+
+    <br>
+    <table class="book-container_table ">
+      <thead>
+        <tr>
+          <th class="col-md">Book Title</th>
+          <th class="col-md">Book Category</th>
+          <th class="col-md">Book Author</th>
+          <th class="col-md">Book isbn</th>
+          <th class="col-md">Book Version</th>
+          <th class="col-md" style="text-align: center;">Actions</th>
+        </tr>
+      </thead>
+      <tbody >
+                <tr *ngFor=" let book of books; let i=index">
+                <td class="col-md">{{ book.title }}</td>
+                <td class="col-md">{{ book.category }}</td>
+                <td class="col-md">{{ book.author}}</td>
+                <td class="col-md">{{ book.isbn}}</td>
+                <td class="col-md">{{ book.version}}</td>
+                <td style="text-align: center;">  
+                  <button mat-icon-button  color="primary" matTooltip="Edit Book" (click)="ViewBook(book)" >
+                  <mat-icon>visibility</mat-icon>
+                </button>
+                  <button mat-icon-button style="color: green;"  matTooltip="Edit Book" (click)="editBook(book)">
+                    <mat-icon>edit</mat-icon>
+                  </button>  
+                  <button mat-icon-button  color="warn" tooltip="matTooltip" matTooltip="Remove Book" (click)="openDeleteConfirmationDialog(book)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+              </td>
+            </tr>
+    </tbody>
+  </table>
+  <mat-paginator #paginator
+  [length]="length"
+  [pageSize]="pageSize"
+  [pageIndex]="currentPage"
+  [pageSizeOptions]="[10, 20, 50]"
+  (page)= "change($event)"
+  ></mat-paginator>
+
+</div>
+   
